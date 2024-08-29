@@ -1,42 +1,221 @@
+:root {
+  background-color: rgba(0, 0, 0, 0.5) #fff8e9;
+  --primary: #00acc2;
+  --secundary: #c10064;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: content-box;
+}
+
+html {
+  font-family: "Times New Roman", Times, serif;
+}
+
 header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 10px;
-    background-color: rgba(23, 23, 23, 0.2);
-    color: #fff;
+  background-color: rgba(23, 23, 23, 0.2);
+  color: #fff;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  color: #fff;
+  z-index: 1;
+}
+body {
+  margin: 0;
+}
+.logo {
+  margin: 0;
+  padding: auto;
+  border-radius: 10px;
+}
+h1 {
+  font-size: 3.5em;
+}
+h2 {
+  font-size: 2.7em;
+}
+h3 {
+  font-size: 2em;
+}
+p {
+  font-size: 1.25em;
+}
+ul {
+  list-style: none;
+}
+li {
+  font-size: 1.25em;
+}
+.nav-container {
+  display: flex;
+  justify-content: center;
+  gap: 8rem;
+}
+
+.nav-container a {
+  color: white;
+  font-size: 24px;
+  font-weight: bold;
+
+  text-decoration: none;
+}
+
+.nav-container a:hover {
+  color: var(--primary);
+}
+h1 {
+  font-family: merienda;
+  font-size: 3.5em;
+  color: white;
+}
+
+button {
+  margin: 2rem;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: var(--secundary);
+}
+
+button:hover {
+  background-color: var(--secundary);
+}
+
+@media (max-width: 768px) {
+  header {
+    flex-direction: column;
   }
-  
   .logo-container {
-    margin-right: 20px;
+    margin-left: 0;
+    margin-bottom: 20px;
   }
-  
-  .logo-container img {
-    width: 100px;
-    height: 100px;
-    margin: 0;
-  }
-  
+
   .nav-container {
-    margin-left: 20px;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
   }
-  
-  .nav-container ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .nav-container li {
-    display: inline-block;
-    margin-right: 20px;
-  }
-  
-  .nav-container a {
-    color: #C10064;
-    text-decoration: none;
-  }
-  
-  .nav-container a:hover {
-    color: #ccc;
-  }
+}
+/* menu burguer */
+
+#hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  flex-direction: column;
+  height: 80vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("img/Sin-titulo-1.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+}
+.texto-centrado {
+  margin-top: 8rem;
+  text-align: center;
+  font-size: 16px;
+
+  line-height: 1.5;
+}
+.parrafoh2 {
+  margin: 4rem;
+}
+.texto-centrado img {
+  width: 90%;
+  max-width: 300px;
+}
+
+#somos-proya .container {
+  text-align: center;
+  padding: 200px 12px;
+}
+
+#nuestros-programas {
+  background-color: rgb(30, 30, 30);
+  color: white;
+  text-align: center;
+}
+
+#nuestros-programas .container {
+  padding: 150px 12px;
+}
+
+#nuestros-programas h2 {
+  margin-top: 0;
+  font-size: 3.2em;
+}
+
+#nuestros-programas p {
+  display: none;
+}
+
+#nuestros-programas .carta {
+  background-position: center center;
+  background-size: cover;
+  padding: 50px 0px;
+  margin: 30px;
+  border-radius: 15px;
+}
+
+.carta:first-child {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("img/line-graph-svgrepo-com.png");
+}
+
+.carta:nth-child(2) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("img/front-end-cropped.jpg");
+}
+
+.carta:nth-child(3) {
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.5)
+    ),
+    url("img/estadist.jpg");
+}
+.recuadro {
+  width: 300px;
+  height: 200px;
+  background-color: #f7f7f7;
+  border: 1px solid #ddd;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  padding: 20px;
+  text-align: center;
+}
+
+.svg {
+  width: 24px;
+  height: 24px;
+  margin: 0 auto;
+  display: block;
+}
+
+#frase {
+  font-size: 16px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}

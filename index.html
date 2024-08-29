@@ -1,26 +1,130 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
-    <link rel="shortcut icon" href="favicon (4).ico" type="image/x-icon">
-    <link href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap" rel="stylesheet">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="styles.css" />
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Merienda:wght@300..900&display=swap"
+      rel="stylesheet"
+    />
     <title>Marketing</title>
-</head>
-<body>
+  </head>
+
+  <body>
     <header>
-        <div class="logo-container">
-          <img src="img/Frame 27 (1).png" alt="Logo de la empresa" width="150" height="50">
+      <div class="logo">
+        <img
+          src="img/Frame 27 (1).png"
+          alt="Logo de la empresa"
+          width="50"
+          height="50"
+        />
+        <div class="navbar" id="myNavbar">
+          <nav class="nav-container">
+            <a href="#">Inicio</a>
+            <a href="#">Servicios</a>
+            <a href="#">Nuestros Clientes</a>
+
+            <a href="#javascript:void(0)" class="icon" id="boton">&#9742;</a>
+          </nav>
         </div>
-        <nav class="nav-container">
-          <ul>
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Servicios</a></li>
-            <li><a href="#">Contacto</a></li>
-          </ul>
-        </nav>
-      </header>
+      </div>
+    </header>
+
+    <main>
+      <section id="hero">
+        <h1>Tarax desing</h1>
+        <button>
+          ¡ Entrar
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            style="fill: rgb(255, 255, 255); transform: ; msfilter: "
+          >
+            <circle cx="17" cy="4" r="2"></circle>
+            <path
+              d="M15.777 10.969a2.007 2.007 0 0 0 2.148.83l3.316-.829-.483-1.94-3.316.829-1.379-2.067a2.01 2.01 0 0 0-1.272-.854l-3.846-.77a1.998 1.998 0 0 0-2.181 1.067l-1.658 3.316 1.789.895 1.658-3.317 1.967.394L7.434 17H3v2h4.434c.698 0 1.355-.372 1.715-.971l1.918-3.196 5.169 1.034 1.816 5.449 1.896-.633-1.815-5.448a2.007 2.007 0 0 0-1.506-1.33l-3.039-.607 1.772-2.954.417.625z"
+            ></path>
+          </svg>
+          !
+        </button>
+      </section>
+      <section>
+        <div class="texto-centrado">
+          <h2>Haz que te encuentren.</h2>
+          <p class="parrafoh2">
+            Tu nueva agencia de Marketing digital.
+            <br /><span class="text"
+              >Especialistas en Inteligencia Artificial.</span
+            >
+          </p>
+          <img src="img/grafic.png" alt="" />
+        </div>
+      </section>
+
+      <section id="nuestros-programas">
+        <div class="container">
+          <h2>Nuestros Programas</h2>
+          <div class="programas">
+            <div class="carta">
+              <h3>Google Analytics</h3>
+              <p>
+                Es una herramienta de análisis de tráfico y comportamiento de
+                los usuarios en línea, que permite a los marketeros medir y
+                optimizar su estrategia de marketing digital.
+              </p>
+              <button>+ Info</button>
+            </div>
+            <div class="carta">
+              <h3>Adobe Experience Cloud:</h3>
+              <p>
+                Es una plataforma de marketing digital que incluye herramientas
+                como Adobe Analytics, Adobe Target, Adobe Campaign y Adobe
+                Workfront, que permiten a los marketeros crear, medir y
+                optimizar experiencias de marca en línea.
+              </p>
+              <button>+ Info</button>
+            </div>
+            <div class="carta">
+              <h3>HubSpot:</h3>
+              <p>
+                Es una plataforma de marketing, ventas y servicio al cliente que
+                incluye herramientas como CRM, email marketing, landing pages, y
+                análisis de tráfico, que permiten a los marketeros automatizar y
+                optimizar sus procesos de marketing digita
+              </p>
+              <button>+ Info</button>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section>
+        <div class="recuadro">
+          <div class="svg">
+            <svg
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+              fill="none"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                fill-rule="evenodd"
+                clip-rule="evenodd"
+                d="M6.53033 2.96967C6.82322 3.26256 6.82322 3.73744 6.53033 4.03033L4.06066 6.5L6.53033 8.96967C6.82322 9.26256 6.82322 9.73744 6.53033 10.0303C6.23744 10.3232 5.76256 10.3232 5.46967 10.0303L2.46967 7.03033C2.17678 6.73744 2.17678 6.26256 2.46967 5.96967L5.46967 2.96967C5.76256 2.67678 6.23744 2.67678 6.53033 2.96967ZM21.5303 12.9697C21.8232 13.2626 21.8232 13.7374 21.5303 14.0303L19.0607 16.5L21.5303 18.9697C21.8232 19.2626 21.8232 19.7374 21.5303 20.0303C21.2374 20.3232 20.7626 20.3232 20.4697 20.0303L17.4697 17.0303C17.1768 16.7374 17.1768 16.2626 17.4697 15.9697L20.4697 12.9697C20.7626 12.6768 21.2374 12.6768 21.5303 12.9697ZM12 3.75C11.5858 3.75 11.25 4.08579 11.25 4.5C11.25 4.91421 11.5858 5.25 12 5.25H21C21.4142 5.25 21.75 4.91421 21.75 4.5C21.75 4.08579 21.4142 3.75 21 3.75H12ZM11.25 8.5C11.25 8.08579 11.5858 7.75 12 7.75H21C21.4142 7.75 21.75 8.08579 21.75 8.5C21.75 8.91421 21.4142 9.25 21 9.25H12C11.5858 9.25 11.25 8.91421 11.25 8.5ZM3 17.75H4.4131L3.1006 19.25H3C2.58579 19.25 2.25 18.9142 2.25 18.5C2.25 18.0858 2.58579 17.75 3 17.75ZM12 19.25H7.0869L8.3994 17.75H12C12.4142 17.75 12.75 18.0858 12.75 18.5C12.75 18.9142 12.4142 19.25 12 19.25ZM11.4939 11.9356C11.8056 12.2083 11.8372 12.6822 11.5644 12.9939L4.56444 20.9939C4.29168 21.3056 3.81786 21.3372 3.50613 21.0644C3.1944 20.7917 3.16282 20.3179 3.43558 20.0061L10.4356 12.0061C10.7083 11.6944 11.1822 11.6628 11.4939 11.9356ZM3 13.75H7.9131L6.6006 15.25H3C2.58579 15.25 2.25 14.9142 2.25 14.5C2.25 14.0858 2.58579 13.75 3 13.75ZM12 15.25H10.5869L11.8994 13.75H12C12.4142 13.75 12.75 14.0858 12.75 14.5C12.75 14.9142 12.4142 15.25 12 15.25Z"
+                fill="#3B434B"
+              ></path>
+            </svg>
+          </div>
+          <p id="frase">¡Te cuento algo sobre mí!</p>
+          <button onclick="mostrarFrase()">Saber más</button>
+        </div>
+      </section>
+    </main>
     <script src="javaS.js"></script>
-</body>
+  </body>
 </html>
