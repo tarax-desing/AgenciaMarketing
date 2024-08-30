@@ -339,6 +339,12 @@ button:hover {
   border-radius: 10px;
   box-shadow: #999;
 }
+.articulo{
+  margin: 4rem;
+  text-align: justify;
+  font-weight: bold;
+  line-height: 2rem;
+}
 #ai {
   height: 80vh;
   background-image: linear-gradient(
