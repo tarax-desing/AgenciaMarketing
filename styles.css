@@ -34,10 +34,9 @@ body {
   padding: auto;
   border-radius: 10px;
 }
-h1 {
-  font-size: 3.5em;
-}
+
 h2 {
+  font-family: merienda;
   font-size: 2.7em;
 }
 h3 {
@@ -46,12 +45,7 @@ h3 {
 p {
   font-size: 1.25em;
 }
-ul {
-  list-style: none;
-}
-li {
-  font-size: 1.25em;
-}
+
 .nav-container {
   display: flex;
   justify-content: center;
@@ -90,7 +84,84 @@ button {
 button:hover {
   background-color: var(--secundary);
 }
+/* /////////// */
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+  padding: 20px;
+  box-shadow: #999;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 
+.gallery img:hover {
+  transform: scale(1.05); /* Ligero aumento de tamaño al pasar el mouse */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Sombra más pronunciada en hover */
+  border-color: #333;
+}
+
+/* Ajuste para pantallas más pequeñas */
+@media (max-width: 768px) {
+  .gallery img {
+    width: calc(50% - 10px); /* Dos imágenes por fila en tablets */
+    height: auto; /* Altura automática para mantener la proporción */
+  }
+}
+
+/* Ajuste para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .gallery img {
+    width: 100%; /* Una imagen por fila en móviles pequeños */
+    height: auto;
+  }
+}
+.thumbnail {
+  width: 20%;
+
+  object-fit: cover;
+  cursor: pointer;
+  border: 2px solid #ddd;
+  transition: border-color 0.3s;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgb(55, 55, 55);
+}
+.modal-content {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.modal-image {
+  max-width: 90%;
+  max-height: 90%;
+}
+.close {
+  color: beige;
+  font-size: 40px;
+  font-weight: bold;
+  position: absolute;
+  right: 35px;
+  top: 15;
+  cursor: pointer;
+}
+
+/*  */
 @media (max-width: 768px) {
   header {
     flex-direction: column;
@@ -135,11 +206,14 @@ button:hover {
   cursor: pointer;
 }
 .parrafoh2 {
-  margin: 4rem;
+  margin: 0 auto;
+  font-weight: bold;
 }
 .texto-centrado img {
-  width: 90%;
+  width: 100%;
   max-width: 300px;
+  /* width: 90%;
+  max-width: 300px; */
 }
 
 #nuestros-servicios {
@@ -211,9 +285,191 @@ button:hover {
   margin: 0 auto;
   display: block;
 }
-
+.contenedor {
+  width: 100%;
+  max-width: 1200px;
+  text-align: center;
+  margin: 0 auto;
+  line-height: 1.5;
+}
 #frase {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 20px;
+}
+
+#ai {
+  height: 80vh;
+  background-image: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.5),
+      rgba(0, 0, 0, 0.6)
+    ),
+    url("img2/ai.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  background-color: rgb(30, 30, 30);
+  color: white;
+  height: 80vh;
+}
+
+#ai h2 {
+  font-size: 9vw;
+}
+.carousel-section {
+  max-width: 1000px;
+  margin: 2rem auto;
+  padding: 1rem;
+}
+.carousel {
+  position: relative;
+  overflow: hidden;
+}
+.carousel-inner {
+  display: flex;
+  transition: transform 0.5s ease;
+}
+.carousel-item {
+  min-width: 100%;
+  padding: 0 10px;
+}
+.carousel-item img {
+  width: 100%;
+  height: 300px;
+  object-fit: cover;
+  cursor: pointer;
+  border-radius: 8px;
+}
+.carousel-button {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0, 0, 0, 0.5);
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1.5rem;
+}
+.carousel-button.prev {
+  left: 10px;
+}
+.carousel-button.next {
+  right: 10px;
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  max-height: 80%;
+  object-fit: contain;
+}
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .carousel-item img {
+    height: 200px;
+  }
+  .carousel-button {
+    padding: 0.5rem;
+    font-size: 1rem;
+  }
+}
+
+.contact {
+  background-color: #f8f9fa;
+  padding: 80px 0;
+}
+
+/* .container {
+  max-width: 600px;
+  margin: 0 auto;
+  padding: 0 20px;
+} */
+
+form {
+  background-color: #ffffff;
+  padding: 40px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/*  */
+
+input[type="text"],
+input[type="mail"],
+textarea {
+  width: 90%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #e0e0e0;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="mail"]:focus,
+textarea:focus {
+  border-color: #007bff;
+  outline: none;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+textarea {
+  height: 150px;
+  resize: vertical;
+}
+
+button:hover {
+  justify-content: center;
+  background-color: var(--secundary);
+}
+
+/* Estilos para placeholder */
+::placeholder {
+  color: #999;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contact {
+    padding: 60px 0;
+  }
+
+  form {
+    padding: 30px;
+  }
+}
+
+footer a {
+  color: var(--primary);
+}
+.pie {
+  text-align: center;
+  padding: 2rem;
 }
