@@ -82,3 +82,14 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   });
 });
+///////
+///img
+document.getElementById("parallax").style.backgroundImage =
+  "url('img2/corto2.png')";
+
+window.addEventListener("scroll", function () {
+  let parallax = document.getElementById("parallax");
+  let scrolPosition = window.scrollY;
+
+  parallax.style.backgroundPositionY = scrolPosition * 0.7 + "px";
+});

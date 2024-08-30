@@ -27,6 +27,7 @@ header {
 body {
   margin: 0;
   padding: 0;
+  height: 80vh;
 }
 
 .logo {
@@ -41,6 +42,8 @@ h2 {
 }
 h3 {
   font-size: 2em;
+  height: 2rem auto;
+  margin: 2rem;
 }
 p {
   font-size: 1.25em;
@@ -271,7 +274,7 @@ button:hover {
 }
 .recuadro {
   border: 2px solid rgb(2, 148, 105);
-  padding: 20px;
+  padding: 10px;
   width: 300px;
   margin: 40px auto;
   text-align: center;
@@ -290,14 +293,52 @@ button:hover {
   max-width: 1200px;
   text-align: center;
   margin: 0 auto;
-  line-height: 1.5;
 }
 #frase {
   font-size: 16px;
   font-weight: bold;
   margin-bottom: 20px;
 }
+.educación {
+  margin: 2rem auto;
+  font-weight: bold;
+  line-height: 10rem;
+}
+/* ///////// */
 
+.parallax {
+  height: 60vh;
+  background-attachment: fixed;
+  background-position: center;
+  background-size: cover;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.parallax h2 {
+  color: white;
+}
+.parallax p {
+  color: var(--primary);
+}
+.content {
+  color: black;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.scroll-content {
+  margin: 2rem;
+  padding: 4rem;
+  text-align: center;
+  font-weight: bold;
+  line-height: 10rem;
+  background-color: #f0f0f0;
+  box-sizing: border-box;
+  border-radius: 10px;
+  box-shadow: #999;
+}
 #ai {
   height: 80vh;
   background-image: linear-gradient(
@@ -412,8 +453,7 @@ button:hover {
 } */
 
 form {
-  background-color: #ffffff;
-  padding: 40px;
+  padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -459,10 +499,6 @@ button:hover {
 @media (max-width: 768px) {
   .contact {
     padding: 60px 0;
-  }
-
-  form {
-    padding: 30px;
   }
 }
 
