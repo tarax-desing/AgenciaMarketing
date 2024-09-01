@@ -1,3 +1,28 @@
+document.addEventListener('DOMContentLoaded', function() {
+  const textEntries = document.querySelectorAll('.text-entry');
+
+  const options = {
+      root: null,
+      rootMargin: '0px',
+      threshold: 0.1
+  };
+
+  const observer = new IntersectionObserver((entries, observer) => {
+      entries.forEach(entry => {
+          if (entry.isIntersecting) {
+              entry.target.classList.add('visible');
+              observer.unobserve(entry.target);
+          }
+      });
+  }, options);
+
+  textEntries.forEach(entry => {
+      observer.observe(entry);
+  });
+});
+
+
+
 // Array de frases motivadoras
 const frases = [
   "Optimización de contenidos con inteligencia artificial para mejorar el ranking en motores de búsqueda.",
@@ -92,4 +117,32 @@ window.addEventListener("scroll", function () {
   let scrolPosition = window.scrollY;
 
   parallax.style.backgroundPositionY = scrolPosition * 0.7 + "px";
+});
+//////////////////escojer
+document.getElementById('servicioForm').addEventListener('submit', function(e) {
+  e.preventDefault();
+  
+  const servicio = document.getElementById('servicio').value;
+  const resultadoDiv = document.getElementById('resultado');
+  let mensaje = '';
+
+  switch(servicio) {
+      case 'ia':
+          mensaje = 'Has seleccionado nuestros servicios de Inteligencia Artificial. Optimizaremos tus procesos con tecnología de vanguardia.';
+          break;
+      case 'seo':
+          mensaje = 'Has elegido nuestros servicios de SEO. Mejoraremos tu visibilidad en los motores de búsqueda.';
+          break;
+      case 'ppc':
+          mensaje = 'Has optado por nuestro Marketing PPC. Crearemos campañas efectivas para aumentar tus conversiones.';
+          break;
+      case 'contenido':
+          mensaje = 'Has seleccionado Marketing de Contenidos. Desarrollaremos estrategias para atraer y retener a tu audiencia.';
+          break;
+      default:
+          mensaje = 'Por favor, selecciona un servicio.';
+  }
+
+  resultadoDiv.textContent = mensaje;
+  resultadoDiv.style.display = 'block';
 });

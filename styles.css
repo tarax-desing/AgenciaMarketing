@@ -82,12 +82,110 @@ button {
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
   color: white;
   background-color: var(--secundary);
+  transition: background-color 0.3s ease;
 }
 
 button:hover {
-  background-color: var(--secundary);
+  background-color: var(--primary);
 }
 /* /////////// */
+
+/*  */
+.contento {
+  flex-wrap: wrap;
+  max-width: 400px;
+  margin: 20px auto;
+  padding: 8rem;
+  display: grid;
+  /* Convierto el contenedor en un grid container */
+  grid-template-columns: 1fr 1fr;
+  /* Dos columnas con el mismo tamaño */
+  gap: 20px;
+  /* Espacio entre columnas */
+  max-width: 1200px;
+  /* Máxima anchura del contenedor */
+  margin: 0 auto;
+  /* Centrar el contenedor */
+  padding: 20px;
+  /* background-color: var(--secundary); */
+  /* Color de fondo del contenedor */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  /* Sombra */
+}
+
+.left {
+  max-width: 100%;
+  /* Ancho máximo de la columna izquierda */
+}
+
+.right img {
+  margin-top: 9rem;
+  max-width: 100%;
+  /* Las imágenes tendrán un ancho máximo del 100% */
+  height: 4rem;
+  /* Mantener la proporción de las imágenes */
+  margin-bottom: 10px;
+  /* Espacio entre imágenes */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+li {
+  text-align: left;
+  margin-top: 2rem;
+}
+.text-entry {
+  height: 400px;
+  opacity: 0;
+  transform: translateX(-100%);
+  transition: opacity 0.5s ease,
+    transform 0.5s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  padding: 20px;
+  margin: 40px 20px;
+  background-color: #fff;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 5px;
+}
+
+/* Selecciona los hijos pares */
+.text-entry:nth-child(even) {
+  transform: translateX(100%);
+}
+
+.text-entry.visible {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+.imagen {
+  padding: 2rem;
+  margin: 2rem;
+}
+
+.column {
+  flex: 1;
+  /* Cada columna ocupa el mismo espacio */
+  margin: 10px;
+  /* Espacio entre columnas */
+}
+
+.left {
+  max-width: 50%; /* Máxima anchura de la columna izquierda */
+  display: flex; /* Usar flexbox en esta columna */
+  flex-direction: column; /* Apilar el contenido en columnas */
+  justify-content: center; /* Centrar verticalmente */
+  align-items: center; /* Centrar horizontalmente */
+  text-align: center; /* Centrar el texto */
+}
+
+.text-entry img {
+  max-width: 100%;
+  /* Las imágenes ocuparán el ancho completo de la columna */
+  height: auto;
+  /* Mantener la proporción de las imágenes */
+  margin-bottom: 10px;
+  /* Espacio entre imágenes */
+}
+/* ////////// */
 .container {
   width: 100%;
   max-width: 1200px;
@@ -339,7 +437,7 @@ button:hover {
   border-radius: 10px;
   box-shadow: #999;
 }
-.articulo{
+.articulo {
   margin: 4rem;
   text-align: justify;
   font-weight: bold;
@@ -446,7 +544,62 @@ button:hover {
     font-size: 1rem;
   }
 }
+/* ////// */
+.escoger {
+  background-color: rgba(255, 255, 255, 0.1);
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+}
 
+h3 {
+  color: var(--primary);
+  text-align: center;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+label {
+  color: var(--secundary);
+}
+
+select {
+  padding: 0.5rem;
+  border: 2px solid var(--primary);
+  background-color: #000;
+  color: #fff;
+  border-radius: 5px;
+}
+/* button {
+  margin: 2rem;
+  font-size: 1.25em;
+  font-weight: bold;
+  padding: 10px 30px;
+  border-radius: 15px;
+  border: 2px solid rgba(0, 0, 0, 0.3);
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
+  color: white;
+  background-color: var(--secundary);
+   cursor: pointer;
+  transition: background-color 0.3s;
+} */
+
+button:hover {
+  background-color: #ff69b4;
+}
+
+#resultado {
+  margin-top: 1rem;
+  padding: 1rem;
+  background-color: rgba(255, 105, 180, 0.1);
+  border-radius: 5px;
+  display: none;
+}
+/* ////////// */
 .contact {
   background-color: #f8f9fa;
   padding: 80px 0;
@@ -514,4 +667,5 @@ footer a {
 .pie {
   text-align: center;
   padding: 2rem;
+  background-color: rgba(0, 0, 0, 0.1);
 }
