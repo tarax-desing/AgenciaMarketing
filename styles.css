@@ -119,15 +119,15 @@ button:hover {
 }
 
 .right img {
-  margin-top: 9rem;
+  margin-top: 6rem;
   max-width: 100%;
   /* Las imágenes tendrán un ancho máximo del 100% */
-  height: 4rem;
+  /* height: 4rem; */
   /* Mantener la proporción de las imágenes */
   margin-bottom: 10px;
   /* Espacio entre imágenes */
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 5px;
+  border-radius: 10px;
 }
 li {
   text-align: left;
