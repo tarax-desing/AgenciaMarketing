@@ -7,11 +7,12 @@
 * {
   margin: 0;
   padding: 0;
-  box-sizing: content-box;
+  box-sizing: border-box;
 }
 
 html {
   font-family: "Times New Roman", Times, serif;
+  scroll-behavior: smooth;
 }
 
 header {
@@ -28,6 +29,9 @@ body {
   margin: 0;
   padding: 0;
   height: 80vh;
+}
+body .contiene {
+  background-color: rgba(177, 177, 177, 0.1);
 }
 
 .logo {
@@ -129,6 +133,9 @@ button:hover {
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
+ul {
+  list-style-type: none;
+}
 li {
   text-align: left;
   margin-top: 2rem;
@@ -186,6 +193,74 @@ li {
   /* Espacio entre imágenes */
 }
 /* ////////// */
+
+.contiene {
+  margin: 10px 10px;
+  padding: 10px 10px;
+  border-radius: 10%;
+  box-shadow: #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  background-color: #333;
+  background-image: url(img3/1.jpg), url(img3/abajo.jpeg);
+  background-repeat: no-repeat, no-repeat;
+  background-position: right 50vw bottom 50vh, left 50vw top 50vh;
+  transition: transform 0.32s ease-in-out;
+}
+
+.card {
+  background-color: white;
+  width: 328px;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 2px 2px 15px rgba(0, 0, 0, 0.5);
+}
+.card-header {
+  width: 100%;
+  display: block;
+}
+.card-body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-bottom: 1px solid var(--color2);
+}
+.card-body-contentimg {
+  border: 5px solid #f67c55;
+  border-radius: 50%;
+  background-color: #fcd3c6;
+  box-shadow: 0px -10px 20px #f67c55;
+  margin-top: -58px;
+}
+.card-body-contentimg-img {
+  padding: 20px;
+}
+.card-body-title {
+  text-align: center;
+  margin-top: 2rem;
+  font-size: 2rem;
+}
+.card-body-title span {
+  color: var(--color2);
+}
+.card-futer {
+  display: flex;
+  justify-content: space-around;
+}
+span {
+  color: var(--primary);
+}
+h4 {
+  color: var(--primary);
+  margin-bottom: 10px;
+}
+.card-futer-poder {
+  text-align: center;
+  margin-bottom: 2rem;
+  margin-top: 2rem;
+}
 .container {
   width: 100%;
   max-width: 1200px;
