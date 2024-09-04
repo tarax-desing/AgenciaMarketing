@@ -31,7 +31,10 @@ body {
   height: 80vh;
 }
 body .contiene {
-  background-color: rgba(177, 177, 177, 0.1);
+  margin: 4rem auto;
+  padding: 8rem;
+  background-color: rgba(177, 177, 177, 0.3);
+  border: solid #333, 1px;
 }
 
 .logo {
@@ -39,8 +42,13 @@ body .contiene {
   padding: auto;
   border-radius: 10px;
 }
-
+.logo img {
+  border-radius: 5px;
+  margin: 4px;
+  border: solid var(--secundary), 1px;
+}
 h2 {
+  color: var(--primary);
   font-family: merienda;
   font-size: 2.7em;
 }
@@ -72,7 +80,7 @@ p {
 }
 h1 {
   font-family: merienda;
-  font-size: 3.5em;
+  font-size: 5em;
   color: white;
 }
 
@@ -125,11 +133,9 @@ button:hover {
 .right img {
   margin-top: 6rem;
   max-width: 100%;
-  /* Las imágenes tendrán un ancho máximo del 100% */
-  /* height: 4rem; */
-  /* Mantener la proporción de las imágenes */
+
   margin-bottom: 10px;
-  /* Espacio entre imágenes */
+
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
   border-radius: 10px;
 }
@@ -204,7 +210,7 @@ li {
   align-items: center;
   height: 90vh;
   background-color: #333;
-  background-image: url(img3/1.jpg), url(img3/abajo.jpeg);
+  background-image: url(img3/01.jpg), url(img3/abajo.jpeg);
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 50vh, left 50vw top 50vh;
   transition: transform 0.32s ease-in-out;
@@ -388,8 +394,6 @@ h4 {
 .texto-centrado img {
   width: 100%;
   max-width: 300px;
-  /* width: 90%;
-  max-width: 300px; */
 }
 
 #nuestros-servicios {
@@ -446,7 +450,7 @@ h4 {
     url("img/estadist.jpg");
 }
 .recuadro {
-  border: 2px solid rgb(2, 148, 105);
+  border: 2px solid var(--primary);
   padding: 10px;
   width: 300px;
   margin: 40px auto;
@@ -476,6 +480,10 @@ h4 {
   margin: 2rem auto;
   font-weight: bold;
   line-height: 10rem;
+}
+.educación h3 {
+  background-color: white;
+  border-radius: solid #333;
 }
 /* ///////// */
 
@@ -538,8 +546,12 @@ h4 {
   color: white;
   height: 80vh;
 }
-
+.redes {
+  text-align: center;
+  margin: 4rem auto;
+}
 #ai h2 {
+  color: white;
   font-size: 9vw;
 }
 .carousel-section {
@@ -624,12 +636,27 @@ h4 {
   background-color: rgba(255, 255, 255, 0.1);
   padding: 2rem;
   border-radius: 10px;
-  box-shadow: 0 0 10px rgba(0, 255, 0, 0.3);
+  box-shadow: 0 0 10px var(--primary);
 }
 
 h3 {
   color: var(--primary);
   text-align: center;
+}
+h3 a {
+  color: #c10064;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0.1);
+  border-radius: 15px;
+}
+#videos {
+  margin-top: 20px;
+  text-align: center;
+}
+#videos iframe {
+  margin: 4rem;
+  width: 50%;
+  height: 400px;
 }
 
 form {
@@ -649,24 +676,86 @@ select {
   color: #fff;
   border-radius: 5px;
 }
-/* button {
-  margin: 2rem;
-  font-size: 1.25em;
-  font-weight: bold;
-  padding: 10px 30px;
-  border-radius: 15px;
-  border: 2px solid rgba(0, 0, 0, 0.3);
-  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.5);
-  color: white;
-  background-color: var(--secundary);
-   cursor: pointer;
-  transition: background-color 0.3s;
-} */
 
-button:hover {
-  background-color: #ff69b4;
+.gallery-section {
+  max-width: 800px;
+  margin: 40px auto;
+  text-align: center;
 }
 
+.gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.gallery img {
+  width: 30%;
+  margin: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.gallery img:hover {
+  transform: scale(1.1);
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: none;
+}
+
+.modal-content {
+  position: relative;
+  background-color: #fff;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #ddd;
+  width: 80%;
+}
+
+.modal-content img {
+  width: 100%;
+  height: auto;
+}
+
+.modal-content h2 {
+  font-weight: bold;
+  margin-top: 0;
+}
+
+.modal-content p {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.modal-content .close {
+  position: absolute;
+  top: 15px;
+  right: 15px;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+.modal-content .close:hover {
+  color: #ccc;
+}
+
+/* Responsive design */
+@media only screen and (max-width: 600px) {
+  .gallery {
+    flex-direction: column;
+  }
+  .gallery img {
+    width: 100%;
+    margin: 10px 0;
+  }
+}
 #resultado {
   margin-top: 1rem;
   padding: 1rem;
@@ -680,14 +769,10 @@ button:hover {
   padding: 80px 0;
 }
 
-/* .container {
-  max-width: 600px;
-  margin: 0 auto;
-  padding: 0 20px;
-} */
-
 form {
-  padding: 30px;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
   border-radius: 8px;
   box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
 }
@@ -735,7 +820,11 @@ button:hover {
     padding: 60px 0;
   }
 }
-
+.paginas ul {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
 footer a {
   color: var(--primary);
 }
