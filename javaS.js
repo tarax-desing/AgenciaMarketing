@@ -161,3 +161,6 @@ carouselItems.forEach((item) => {
   });
 });
 ////////
+document.getElementById("myButton").addEventListener("click", function () {
+  alert("Gracias por tu mensaje, te contestaremos lo antes posible.");
+});

@@ -25,14 +25,13 @@ header {
   color: #fff;
   z-index: 1;
 }
+
 body {
   margin: 0;
   padding: 0;
   height: 80vh;
 }
 body .contiene {
-  margin: 4rem auto;
-  padding: 8rem;
   background-color: rgba(177, 177, 177, 0.3);
   border: solid #333, 1px;
 }
@@ -124,7 +123,11 @@ button:hover {
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
   /* Sombra */
 }
-
+@media (max-width: 700px) {
+  .contento {
+    display: block;
+  }
+}
 .left {
   max-width: 100%;
   /* Ancho máximo de la columna izquierda */
@@ -182,7 +185,6 @@ li {
 }
 
 .left {
-  max-width: 50%; /* Máxima anchura de la columna izquierda */
   display: flex; /* Usar flexbox en esta columna */
   flex-direction: column; /* Apilar el contenido en columnas */
   justify-content: center; /* Centrar verticalmente */
@@ -204,12 +206,11 @@ li {
   margin: 10px 10px;
   padding: 10px 10px;
   border-radius: 10%;
-  box-shadow: #999;
+  box-shadow: var(--primary);
   display: flex;
   justify-content: center;
   align-items: center;
-  height: 90vh;
-  background-color: #333;
+  height: 100vh;
   background-image: url(img3/01.jpg), url(img3/abajo.jpeg);
   background-repeat: no-repeat, no-repeat;
   background-position: right 50vw bottom 50vh, left 50vw top 50vh;
@@ -388,7 +389,7 @@ h4 {
   cursor: pointer;
 }
 .parrafoh2 {
-  margin: 0 auto;
+  margin: 2rem auto;
   font-weight: bold;
 }
 .texto-centrado img {
@@ -514,7 +515,7 @@ h4 {
   padding: 4rem;
   text-align: center;
   font-weight: bold;
-  line-height: 10rem;
+  line-height: 3rem;
   background-color: #f0f0f0;
   box-sizing: border-box;
   border-radius: 10px;
@@ -549,6 +550,12 @@ h4 {
 .redes {
   text-align: center;
   margin: 4rem auto;
+}
+.redes img {
+  width: 100%;
+  text-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
 }
 #ai h2 {
   color: white;
@@ -604,23 +611,34 @@ h4 {
   width: 100%;
   height: 100%;
   background-color: rgba(0, 0, 0, 0.9);
+  z-index: 1;
 }
 .modal-content {
-  margin: auto;
-  display: block;
+  position: relative;
+  background-color: #fefefe;
+  margin: 15% auto;
+  padding: 20px;
+  border: 1px solid #888;
   width: 80%;
-  max-width: 700px;
-  max-height: 80%;
-  object-fit: contain;
 }
 .close {
-  position: absolute;
-  top: 15px;
-  right: 35px;
-  color: #f1f1f1;
-  font-size: 40px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
   font-weight: bold;
   cursor: pointer;
+}
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+#modal-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
 }
 @media (max-width: 768px) {
   .carousel-item img {
@@ -678,6 +696,7 @@ select {
 }
 
 .gallery-section {
+  position: relative;
   max-width: 800px;
   margin: 40px auto;
   text-align: center;
@@ -698,52 +717,6 @@ select {
 
 .gallery img:hover {
   transform: scale(1.1);
-}
-
-.modal {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: rgba(0, 0, 0, 0.5);
-  display: none;
-}
-
-.modal-content {
-  position: relative;
-  background-color: #fff;
-  margin: 15% auto;
-  padding: 20px;
-  border: 1px solid #ddd;
-  width: 80%;
-}
-
-.modal-content img {
-  width: 100%;
-  height: auto;
-}
-
-.modal-content h2 {
-  font-weight: bold;
-  margin-top: 0;
-}
-
-.modal-content p {
-  font-size: 16px;
-  margin-bottom: 20px;
-}
-
-.modal-content .close {
-  position: absolute;
-  top: 15px;
-  right: 15px;
-  font-size: 24px;
-  cursor: pointer;
-}
-
-.modal-content .close:hover {
-  color: #ccc;
 }
 
 /* Responsive design */
@@ -824,6 +797,9 @@ button:hover {
   display: flex;
   flex-direction: row;
   justify-content: space-around;
+}
+.paginas a {
+  text-decoration: none;
 }
 footer a {
   color: var(--primary);
