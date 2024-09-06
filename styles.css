@@ -545,18 +545,8 @@ h4 {
   text-align: center;
   background-color: rgb(30, 30, 30);
   color: white;
-  height: 80vh;
 }
-.redes {
-  text-align: center;
-  margin: 4rem auto;
-}
-.redes img {
-  width: 100%;
-  text-wrap: wrap;
-  justify-content: center;
-  padding: 1rem;
-}
+
 #ai h2 {
   color: white;
   font-size: 9vw;
@@ -649,6 +639,16 @@ h4 {
     font-size: 1rem;
   }
 }
+.redes {
+  text-align: center;
+  margin: 4rem auto;
+}
+.redes img {
+  width: 100%;
+  text-wrap: wrap;
+  justify-content: center;
+  padding: 1rem;
+}
 /* ////// */
 .escoger {
   background-color: rgba(255, 255, 255, 0.1);
@@ -737,6 +737,15 @@ select {
   display: none;
 }
 /* ////////// */
+#mi-parrafo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  color: #666;
+}
 .contact {
   background-color: #f8f9fa;
   padding: 80px 0;
